@@ -1,0 +1,14 @@
+.footer {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: rgba(33, 33, 33, 0.7);
+  text-align: center;
+  padding: 10px;
+}
+
+.footer__copyright {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
