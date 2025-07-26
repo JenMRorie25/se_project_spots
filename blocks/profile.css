@@ -100,9 +100,13 @@
     max-width: 288px;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 20px 0;
+    gap: 12px;
     justify-content: space-between;
+  }
+
+  .profile__content {
+    padding: 0 16px;
   }
 
   .profile__avatar {
