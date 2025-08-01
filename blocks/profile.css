@@ -102,12 +102,12 @@
     align-items: center;
     text-align: center;
     padding: 20px 0;
-    gap: 6px;
+    gap: 0;
     justify-content: space-between;
   }
 
   .profile__avatar {
-    gap: 6px;
+    margin-bottom: 12px;
     height: 80px;
     width: 80px;
     margin-right: 0;
@@ -121,19 +121,23 @@
   }
 
   .profile__name {
-    margin-bottom: 0;
+    margin-bottom: 6px;
     font-size: 20px;
     max-width: 288px;
   }
 
   .profile__description {
-    margin: 0 0 6px 0;
+    margin-bottom: 32px;
     max-width: 288px;
   }
 
   .profile__add-btn {
-    margin-left: 0;
     max-width: 288px;
     width: 100%;
+    margin-left: 0;
+  }
+
+  .profile__edit-btn {
+    margin-bottom: 20px;
   }
 }
