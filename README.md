@@ -49,7 +49,7 @@ Spots is a responsive "photo-sharing" gallery web app. Users can:
 
 ![logo image](./images/logo.svg)
 
-![Pencile image](./images/pencile.svg)
+![Pencil image](./images/pencil.svg)
 
 ![plus image](./images/plus.svg)
 
