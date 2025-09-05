@@ -12,10 +12,14 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 32px;
   line-height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal__container {
@@ -33,16 +37,20 @@
   right: 50px;
   height: 40px;
   width: 40px;
-  opacity: 40%;
+  opacity: 0.4;
   border: none;
   padding: 0;
+  background: none;
+  font-size: 20;
+  line-height: 1;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2 ease;
 }
 
 .modal__close-btn:hover {
   transform: scale(1.1);
-  background-color: rbga(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -52,10 +60,12 @@
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0;
-  width: 149px;
-  height: 32px;
+  width: auto;
+  height: auto;
   top: 236px;
   left: 405px;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .modal__form {
@@ -121,38 +131,53 @@
   }
 
   .modal__container {
-    max-width: 90%;
-    padding: 20px;
+    max-width: 627px;
+    width: 100%;
+    padding: 20px 16px;
+    border-radius: 8px;
   }
 
   .modal__title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    white-space: nowrap;
     width: auto;
     height: auto;
   }
 
   .modal__label {
-    font-size: 16px;
-    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
   }
 
   .modal__input {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 12px;
+    margin-bottom: 16px;
   }
 
   .modal__submit-btn {
-    max-width: 100%;
     width: 100%;
     padding: 14px;
     font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 24px;
   }
 
   .modal__close-btn {
-    top: 16px;
-    right: 16px;
-    height: 32px;
-    width: 32px;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    font-size: 18px;
+    position: relative;
+    opacity: 0.6;
   }
 }
