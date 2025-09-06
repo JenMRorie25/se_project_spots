@@ -24,7 +24,7 @@ const profileDescriptionElement = document.querySelector(
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editDescriptionNameInput.value = profileDescriptionElement.textContent;
-  editProfileModal.classList.add("modal_is-opened");
+  editProfileModal.classList.add("modal_is-open");
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
