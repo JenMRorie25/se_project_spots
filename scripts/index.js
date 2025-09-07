@@ -21,6 +21,14 @@ const profileDescriptionElement = document.querySelector(
   ".profile__description"
 );
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editDescriptionNameInput.value = profileDescriptionElement.textContent;
@@ -42,6 +50,7 @@ newPostCloseBtn.addEventListener("click", function () {
 });
 
 function handleEditProfileSubmit(evt) {
+  console.log("Form submitted!");
   evt.preventDefault();
   profileNameElement.textContent = editProfileNameInput.value;
   profileDescriptionElement.textContent = editDescriptionNameInput.value;
