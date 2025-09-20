@@ -18,6 +18,10 @@
   padding: 0 10px;
 }
 
+.modal_type_preview {
+  padding: 0 16px;
+}
+
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
@@ -50,6 +54,26 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+.modal__close_type_preview {
+  position: absolute;
+  top: 0;
+  right: -52.5px;
+  width: 40px;
+  height: 40px;
+  background: transparent url("../images/CloseIcon.png") center/contain
+    no-repeat;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.modal__close_type_preview:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 .modal__close-btn:hover {
   transform: scale(1.1);
   background-color: rgba(0, 0, 0, 0.05);
@@ -64,6 +88,34 @@
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0;
+}
+
+.modal__image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  margin: 10px 0 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+  color: #fff;
 }
 
 .modal__form {
@@ -118,7 +170,7 @@
   transform: scale(1.03);
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 480px) {
   .modal__container {
     padding: 22px 12px 12px;
   }
@@ -157,5 +209,21 @@
   .modal__close-btn {
     top: 12px;
     right: 12px;
+  }
+}
+
+@media and (max-width: 627px) {
+  .modal__close_type_preview {
+    top: -48px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-size: 16px 16px;
+  }
+
+  .modal__image {
+    max-width: unset;
+    max-width: 90vw;
+    max-height: 70vh;
   }
 }
