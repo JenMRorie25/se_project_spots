@@ -2,7 +2,9 @@ const initialCards = [
   {
     name: "Golden Gate Bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 
+  {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
@@ -95,14 +97,6 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function openModal(modal) {
-  modal.classList.add("modal_is-opened");
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
-}
-
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editDescriptionNameInput.value = profileDescriptionElement.textContent;
@@ -142,16 +136,6 @@ function handleAddCardSubmit(evt) {
   closeModal(newPostModal);
 }
 
-function openModal(modal) {
-  modal.classList.add("modal_is-opened");
-  document.addEventListener("keydown", handleEscClose);
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
-  document.removeEventListener("keydown", handleEscClose);
-}
-
 function handleEscClose(evt) {
   if (evt.key === "Escape") {
     const opened = document.querySelector(".modal.modal_is-opened");
@@ -169,7 +153,8 @@ addCardFormElement.addEventListener("submit", function (evt) {
     link: linkInput.value,
   });
   cardsList.prepend(cardElement);
-  addCardFormElement.requestFullscreen();
+
+  addCardFormElement.reset();
   closeModal(newPostModal);
 });
 

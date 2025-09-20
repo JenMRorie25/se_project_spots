@@ -160,7 +160,6 @@
   line-height: 100%;
   color: #fcf5e5;
   font-weight: 500;
-  font-style: Medium;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -212,7 +211,7 @@
   }
 }
 
-@media and (max-width: 627px) {
+@media screen and (max-width: 627px) {
   .modal__close_type_preview {
     top: -48px;
     right: 0;
