@@ -64,6 +64,16 @@ const cardTemplate = document
 
 const cardsList = document.querySelector(".cards__list");
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleElement = cardElement.querySelector(".card__title");
@@ -80,10 +90,6 @@ function getCardElement(data) {
     openModal(previewModal);
   });
 
-  previewCloseBtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   const cardLikeBtnElement = cardElement.querySelector(".card__like-btn");
   cardLikeBtnElement.addEventListener("click", () => {
     cardLikeBtnElement.classList.toggle("card__like-btn_active");
@@ -96,6 +102,15 @@ function getCardElement(data) {
 
   return cardElement;
 }
+
+previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
+
+editProfileForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  profileNameElement.textContent = editProfileNameInput.value;
+  profileDescriptionElement.textContent = editDescriptionNameInput.value;
+  closeModal(editProfileModal);
+});
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
@@ -125,8 +140,6 @@ function handleEditProfileSubmit(evt) {
   closeModal(editProfileModal);
 }
 
-editProfileForm.addEventListener("submit", handleEditProfileSubmit);
-
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -143,8 +156,6 @@ function handleEscClose(evt) {
   }
 }
 
-previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
-
 addCardFormElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
@@ -157,8 +168,6 @@ addCardFormElement.addEventListener("submit", function (evt) {
   addCardFormElement.reset();
   closeModal(newPostModal);
 });
-
-addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
