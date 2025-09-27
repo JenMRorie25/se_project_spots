@@ -54,22 +54,23 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.modal__close_type_preview {
+.modal__close_btn-type_preview {
   position: absolute;
   top: 0;
   right: -52.5px;
   width: 40px;
   height: 40px;
-  background: transparent url("../images/CloseIcon.png") center/contain
+  background: transparent url("../images/Close-Icon.svg") center/contain
     no-repeat;
   border: none;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease, transform 0.2s ease;
   padding: 0;
+  filter: brightness(0) invert(1);
 }
 
-.modal__close_type_preview:hover {
+.modal__close_btn-type_preview:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -203,6 +204,7 @@
     font-weight: 600;
     line-height: 20px;
     margin-top: 24px;
+    background-color: black;
   }
 
   .modal__close-btn {
@@ -212,7 +214,7 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal__close_type_preview {
+  .modal__close_btn-type_preview {
     top: -48px;
     right: 0;
     width: 32px;
