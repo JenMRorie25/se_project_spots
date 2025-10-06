@@ -67,14 +67,13 @@
   right: -52.5px;
   width: 40px;
   height: 40px;
-  background: transparent url(../images/Close-Icon-white.svg) center/contain
-    no-repeat;
+  background: transparent url(../images/close-icon.svg) center/contain no-repeat;
   border: none;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.6;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  padding: 0;
   filter: brightness(0) invert(1);
+  padding: 0;
 }
 
 .modal__close-btn_type_preview:hover {
