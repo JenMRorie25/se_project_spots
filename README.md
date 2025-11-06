@@ -75,10 +75,14 @@ Spots is a responsive "photo-sharing" gallery web app. Users can:
 
 ![Mobile layout of Spots](./images/Mobile3.png)
 
-## Live Demo & Video
+## Live Demo
 
 Check out the live site on GitHub Pages:
 https://jenmrorie25.github.io/se_project_spots/
 
-Check out the Recorded Video:
-![Watch the Video](https://drive.google.com/file/d/1oifKQSh8E6WLQigEwWE-9F3EE0BST-1S/view?usp=sharing)
+## Project Pitch Videos
+
+Check out these videos, where I describe my project and some challegnges I faced while building it:
+
+![First Video](https://drive.google.com/file/d/1oifKQSh8E6WLQigEwWE-9F3EE0BST-1S/view?usp=sharing)
+![Second Video Spots Stage 9](https://drive.google.com/file/d/1D1-SeucCULoAdDAre2J-YtznsU0uZgxH/view?usp=drive_link)
