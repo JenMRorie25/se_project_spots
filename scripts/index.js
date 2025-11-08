@@ -31,13 +31,13 @@ const initialCards = [
 ];
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
-const editProfileModal = document.querySelector("#edit-profile-modal");
+const editProfileModal = document.querySelector("#edit-profile-form");
 const editProfileClosebtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
-const editDescriptionNameInput = editProfileModal.querySelector(
+const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
 
@@ -46,7 +46,7 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const addCardFormElement = newPostModal.querySelector(".modal__form");
 const nameInput = newPostModal.querySelector("#card-caption-input");
-const linkInput = newPostModal.querySelector("#card-image-input");
+const linkInput = newPostModal.querySelector("#card-link-input");
 
 const cardSubmitButton = newPostModal.querySelector(".modal__submit-btn");
 disableButton(cardSubmitButton, settings);
@@ -68,14 +68,22 @@ const cardTemplate = document
 
 const cardsList = document.querySelector(".cards__list");
 
+function handleOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.currentTarget);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
   document.addEventListener("keydown", handleEscClose);
+  modal.addEventListner("mousedown", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
   document.removeEventListener("keydown", handleEscClose);
+  modal.removeEventListner("mousedown", handleOverlayClick);
 }
 
 function getCardElement(data) {
