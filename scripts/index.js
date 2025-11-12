@@ -31,7 +31,7 @@ const initialCards = [
 ];
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
-const editProfileModal = document.querySelector("#edit-profile-form");
+const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileClosebtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
@@ -120,16 +120,16 @@ previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 editProfileForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   profileNameElement.textContent = editProfileNameInput.value;
-  editDescriptionInput.textContent = editDescriptionNameInput.value;
+  profileDescriptionElement.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
 });
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
-  editDescriptionInput.value = profileDescriptionElement.textContent;
+  editProfileDescriptionInput.value = profileDescriptionElement.textContent;
   resetValidation(
     editProfileForm,
-    [editProfileNameInput, editDescriptionInput],
+    [editProfileNameInput, editProfileDescriptionInput],
     settings
   );
   openModal(editProfileModal);
